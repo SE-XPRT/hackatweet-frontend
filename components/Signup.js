@@ -1,10 +1,15 @@
+import { useEffect, useState } from "react";
+import { login } from "../reducers/user";
+import { useDispatch } from "react-redux";
 import Image from "next/image";
 import styles from "../styles/Login.module.css";
-import { useState } from "react";
+import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 function Signup() {
+  const dispacth = useDispatch();
+  const router = useRouter();
   const [firstname, setFirstname] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -14,6 +19,27 @@ function Signup() {
   const signUpClick = () => {
     setShowModal((prevState) => !prevState);
     console.log("ok" + showModal);
+  };
+  const registerClick = () => {
+    fetch("http://localhost:3000/users/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username: username,
+        firstname: firstname,
+        password: password,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+
+        dispacth(login({ username: username, token: data.token }));
+        if (data.result) {
+          router.push("/homepage");
+        }
+        setShowModal(false);
+      });
   };
 
   return (
@@ -53,7 +79,11 @@ function Signup() {
           placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button className={styles.SubSgnup} type="submit">
+        <button
+          className={styles.SubSgnup}
+          type="submit"
+          onClick={() => registerClick()}
+        >
           Sign Up
         </button>
       </div>
