@@ -1,26 +1,20 @@
 .main {
   display: flex;
-}
-.rightContent {
-  padding: 10px;
-  width: 100%;
   background-color: #151d26;
 }
-.title {
-  line-height: 1.15;
-  font-size: 4rem;
+@font-face {
+  font-family: "Mont-heavy";
+  src: url(../public/Mont-HeavyDEMO.otf);
+}
+.rightContent {
+  padding: 20px;
+  width: 30%;
+  font-family: "Mont-heavy", Verdana;
+  color: #ffff;
+  display: flex;
+  flex-direction: column;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
 .header {
   background-image: url(../public/twitter.PNG);
   background-position: center;
@@ -29,6 +23,40 @@
   transform: rotate(180deg);
 }
 .logo {
-  margin: 20px;
+  display: flex;
+  justify-content: right;
+
   transform: rotate(180deg);
+}
+.h1 {
+  font-size: 4.3em;
+}
+.h2 {
+  font-size: 2.5em;
+}
+.Button1 {
+  margin: 15px 0 15px 0;
+  border: none;
+  border-radius: 20px;
+  height: 40px;
+  color: #ffffff;
+  font-family: "Mont-heavy";
+  font-size: 1.1em;
+  width: 200px;
+  background-color: #3690ed;
+}
+.Button2 {
+  margin: 15px 0 15px 0;
+  border: solid 1px #fff;
+  border-radius: 40px;
+  height: 35px;
+  color: #3690ed;
+  font-family: "Mont-heavy";
+  font-size: 1.1em;
+  width: 200px;
+  background-color: #151d26;
+}
+.linkWhite {
+  color: white;
+  text-decoration: none;
 }
