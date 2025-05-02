@@ -1,5 +1,38 @@
 
+.post {
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 1rem;
+    border-bottom: 1px solid #232b35;
+
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.grayText {
+    color: #68727E;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    align-items: flex-start;
+}
+
 .egg {
     object-fit: cover;
     border-radius: 150%;
   }
+
+.heart {
+    margin-top: 1.5rem;
+    cursor: pointer;
+}

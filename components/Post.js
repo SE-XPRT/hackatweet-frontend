@@ -1,5 +1,7 @@
 import styles from "../styles/Post.module.css";
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 function Post() {
   return (
@@ -12,9 +14,15 @@ function Post() {
           width={45}
           height={45}
         />
-        John <span>@John Cena - a few seconds</span>
+        <div>
+          <strong>John </strong>
+          <span className={styles.grayText}>@John Cena - a few seconds</span>
+        </div>
       </div>
-      <div className={styles.content}>YOU CAN'T SEE ME ! #cenation</div>
+      <div className={styles.content}>
+        YOU CAN'T SEE ME ! #cenation
+        <FontAwesomeIcon className={styles.heart} icon={faHeart} />
+      </div>
     </div>
   );
 }

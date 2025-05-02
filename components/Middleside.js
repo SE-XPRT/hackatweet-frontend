@@ -13,6 +13,7 @@ function Middleside(props) {
           className={styles.input}
           onChange={(e) => setMessage(e.target.value)}
           type="text"
+          placeholder="What's up"
           value={message}
         />
         <div className={styles.underInput}>
