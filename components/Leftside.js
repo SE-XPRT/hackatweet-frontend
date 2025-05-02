@@ -1,8 +1,6 @@
 import styles from "../styles/Leftside.module.css";
 import Image from "next/image";
-
 import { useSelector } from "react-redux";
-
 import { useRouter } from "next/router";
 
 function Leftside(props) {
