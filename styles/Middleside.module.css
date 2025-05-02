@@ -1,0 +1,43 @@
+.page {
+  color: #fff;
+  width: 100%;
+}
+
+.top {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #232b35;
+}
+
+.input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-size: 1.2rem;
+  outline: none;
+}
+
+.input,
+.underInput {
+  width: 80%;
+  align-self: center;
+}
+
+.underInput {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.button {
+  background-color: #3690ed;
+  padding: 5px 20px;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+}

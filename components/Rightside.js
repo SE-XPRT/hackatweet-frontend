@@ -1,7 +1,11 @@
 import styles from "../styles/Rightside.module.css";
 
 function RightSide() {
-  return <></>;
+  return (
+    <div className={styles.page}>
+      <div><h1>Trends</h1></div>
+    </div>
+  );
 }
 
 export default RightSide;

@@ -8,3 +8,8 @@ body {
 * {
   box-sizing: border-box;
 }
+
+h1 {
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}

@@ -1,9 +1,9 @@
 import styles from "../styles/Leftside.module.css";
 import Image from "next/image";
 
-function Leftside() {
+function Leftside(props) {
   return (
-    <div className={styles.page}>
+    <div className={styles.page} style={props.style}>
       <span>
         <Image
           src="/white-logo.png"

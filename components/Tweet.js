@@ -6,9 +6,9 @@ import RightSide from "./RightSide";
 function Tweet() {
   return (
     <div className={styles.page}>
-      <Leftside />
-      <MiddleSide />
-      <RightSide />
+      <Leftside style={{width: "20%"}} />
+      <MiddleSide style={{width: "55%"}} />
+      <RightSide style={{width: "25%"}}/>
     </div>
   );
 }
