@@ -8,7 +8,7 @@ function Tweet() {
     <div className={styles.page}>
       <Leftside style={{width: "20%"}} />
       <MiddleSide style={{width: "55%"}} />
-      <RightSide style={{width: "25%"}}/>
+      <RightSide style={{width: "20%"}} />
     </div>
   );
 }
