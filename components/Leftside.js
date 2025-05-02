@@ -1,14 +1,12 @@
 import styles from "../styles/Leftside.module.css";
 import Image from "next/image";
 import { useSelector } from "react-redux";
-import { useRouter } from "next/router"
+import { useRouter } from "next/router";
 
 function Leftside(props) {
   const user = useSelector((state) => state.user.value);
-  console.log(user);
+  const router = useRouter();
 
-
-  const router = useRouter()
   return (
     <div className={styles.page} style={props.style}>
       <span>
@@ -18,7 +16,7 @@ function Leftside(props) {
           alt="logo"
           width={50}
           height={50}
-          onClick={() => router.push('/')}
+          onClick={() => router.push("/")}
         />
       </span>
       <div className={styles.profilPart}>
