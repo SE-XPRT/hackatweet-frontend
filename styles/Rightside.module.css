@@ -5,6 +5,17 @@
 }
 
 .h1 {
-    margin-top: 2rem;
-    margin-left: 2rem;
-  } 
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+.trends {
+  width: 90%;
+  justify-self: center;
+  padding: 1rem;
+  background-color: #1b232c;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}

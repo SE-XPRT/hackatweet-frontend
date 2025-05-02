@@ -5,7 +5,10 @@ function RightSide(props) {
   return (
     <div className={styles.page} style={props.style}>
       <div><h1 className={styles.h1}>Trends</h1></div>
-      <div>
+      <div className={styles.trends}>
+        <Trend />
+        <Trend />
+        <Trend />
         <Trend />
       </div>
     </div>

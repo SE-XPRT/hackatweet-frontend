@@ -1,6 +1,15 @@
 
 .page {
-    width: 90%;
-    padding: 1rem   ;
-    background-color: #1B232C;
+    width: 100%;
+}
+
+.trend {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.h4 {
+    margin: 0;
 }
