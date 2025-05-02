@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/Link";
 import Signup from "./Signup";
 
-function Home() {
+function Login() {
   const [hidden, setHidden] = useState(true);
 
   const signUpClick = () => {
@@ -49,4 +49,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Login;
