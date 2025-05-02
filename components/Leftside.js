@@ -1,18 +1,14 @@
 import styles from "../styles/Leftside.module.css";
 import Image from "next/image";
-<<<<<<< HEAD
 import { useSelector } from "react-redux";
+import { useRouter } from "next/router"
 
 function Leftside(props) {
   const user = useSelector((state) => state.user.value);
   console.log(user);
 
-=======
-import { useRouter } from "next/router"
 
-function Leftside(props) {
   const router = useRouter()
->>>>>>> 8752fa09b84a971c1129c3061b016a9681471146
   return (
     <div className={styles.page} style={props.style}>
       <span>
