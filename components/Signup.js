@@ -34,7 +34,13 @@ function Signup() {
       .then((data) => {
         console.log(data);
 
-        dispacth(login({ username: username, token: data.token }));
+        dispacth(
+          login({
+            username: username,
+            token: data.token,
+            firstname: data.firstname,
+          })
+        );
         if (data.result) {
           router.push("/homepage");
         }

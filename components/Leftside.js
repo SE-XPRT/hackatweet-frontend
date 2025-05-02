@@ -29,7 +29,7 @@ function Leftside(props) {
         />
         <div className={styles.userInfo}>
           <span>{user.username}</span>
-          <span>@John Cena</span>
+          <span>@{user.firstname}</span>
         </div>
       </div>
     </div>

@@ -27,13 +27,20 @@ function Signin() {
       body: JSON.stringify({
         username: username,
         password: password,
+        firstname: password,
       }),
     })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
 
-        dispacth(login({ username: username, token: data.token }));
+        dispacth(
+          login({
+            username: username,
+            token: data.token,
+            firstname: data.firstname,
+          })
+        );
         if (data.token && username) {
           router.push("/homepage");
         }
