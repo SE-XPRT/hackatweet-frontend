@@ -1,6 +1,7 @@
 .main {
   display: flex;
   background-color: #151d26;
+  height: 100vh;
 }
 @font-face {
   font-family: "Mont-heavy";
@@ -59,4 +60,12 @@
 .linkWhite {
   color: white;
   text-decoration: none;
+}
+@media screen and (max-width: 1450px) {
+  .h1 {
+    font-size: 3.3em;
+  }
+  .h2 {
+    font-size: 1.5em;
+  }
 }

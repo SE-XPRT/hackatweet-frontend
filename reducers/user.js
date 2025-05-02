@@ -11,6 +11,7 @@ export const userSlice = createSlice({
     login: (state, action) => {
       state.value.token = action.payload.token;
       state.value.username = action.payload.username;
+      state.value.firstname = action.payload.firstname;
 
       console.log(JSON.parse(JSON.stringify(state.value)));
     },

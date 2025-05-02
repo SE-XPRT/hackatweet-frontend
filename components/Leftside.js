@@ -1,7 +1,11 @@
 import styles from "../styles/Leftside.module.css";
 import Image from "next/image";
+import { useSelector } from "react-redux";
 
 function Leftside(props) {
+  const user = useSelector((state) => state.user.value);
+  console.log(user);
+
   return (
     <div className={styles.page} style={props.style}>
       <span>
@@ -22,7 +26,7 @@ function Leftside(props) {
           height={35}
         />
         <div className={styles.userInfo}>
-          <span>John</span>
+          <span>{user.username}</span>
           <span>@John Cena</span>
         </div>
       </div>
