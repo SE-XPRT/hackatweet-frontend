@@ -1,7 +1,9 @@
 import styles from "../styles/Leftside.module.css";
 import Image from "next/image";
+import { useRouter } from "next/router"
 
 function Leftside(props) {
+  const router = useRouter()
   return (
     <div className={styles.page} style={props.style}>
       <span>
@@ -11,6 +13,7 @@ function Leftside(props) {
           alt="logo"
           width={50}
           height={50}
+          onClick={() => router.push('/')}
         />
       </span>
       <div className={styles.profilPart}>
