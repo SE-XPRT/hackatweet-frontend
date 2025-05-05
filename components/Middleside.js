@@ -1,9 +1,17 @@
 import styles from "../styles/Middleside.module.css";
 import { useState } from "react";
+import { addTrendingHashtags } from "../reducers/trends";
+import { useDispatch } from "react-redux";
 import Post from "./Post";
 
 function Middleside(props) {
+  const dispatch = useDispatch();
   const [message, setMessage] = useState("");
+
+  const getHashtagswords = (text) => {
+    const hashtags = text.match(/#\w+/g);
+    dispatch(addTrendingHashtags(hashtags))
+  };
 
   return (
     <div className={styles.page} style={props.style}>
@@ -18,7 +26,10 @@ function Middleside(props) {
         />
         <div className={styles.underInput}>
           {message.length}/200
-          <button className={styles.button}>
+          <button
+            onClick={() => getHashtagswords(message)}
+            className={styles.button}
+          >
             <strong>Tweet</strong>
           </button>
         </div>
