@@ -1,6 +1,6 @@
 import styles from "../styles/Middleside.module.css";
 import { useState } from "react";
-import { addTrendingHashtags } from "../reducers/trends";
+import { addTrendingHashtags } from "../reducers/hashtags";
 import { useDispatch } from "react-redux";
 import Post from "./Post";
 
@@ -10,7 +10,7 @@ function Middleside(props) {
 
   const getHashtagswords = (text) => {
     const hashtags = text.match(/#\w+/g);
-    dispatch(addTrendingHashtags(hashtags))
+    dispatch(addTrendingHashtags(hashtags));
   };
 
   return (

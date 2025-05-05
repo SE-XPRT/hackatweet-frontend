@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import Head from "next/head";
 import user from "../reducers/user";
-import hashtags from "../reducers/trends";
+import hashtags from "../reducers/hashtags";
 import { Provider } from "react-redux";
 import {
   combineReducers,
