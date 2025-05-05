@@ -1,9 +1,12 @@
 import styles from "../styles/Post.module.css";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import { useSelector } from "react-redux";
 
-function Post() {
+function Post({ id, username, firstname, content, handleDelete }) {
+  const user = useSelector((state) => state.user.value);
+
   return (
     <div className={styles.post}>
       <div className={styles.userInfo}>
@@ -15,13 +18,23 @@ function Post() {
           height={45}
         />
         <div>
-          <strong>John </strong>
-          <span className={styles.grayText}>@John Cena - a few seconds</span>
+          <strong>{firstname}</strong>
+          <span className={styles.grayText}>
+            @{username} - a few seconds ago
+          </span>
         </div>
       </div>
       <div className={styles.content}>
-        YOU CAN'T SEE ME ! #cenation
+        {content}
         <FontAwesomeIcon className={styles.heart} icon={faHeart} />
+        {username === user.username && (
+          <FontAwesomeIcon
+            className={styles.trash}
+            icon={faTrashCan}
+            onClick={() => handleDelete(id)}
+            style={{ cursor: "pointer" }}
+          />
+        )}
       </div>
     </div>
   );
