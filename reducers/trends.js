@@ -10,9 +10,7 @@ export const hashtagsSlice = createSlice({
   reducers: {
     addTrendingHashtags: (state, action) => {
       if (action.payload) {
-        state.value.push(
-          ...action.payload.filter((e) => !state.value.includes(e))
-        );
+        state.value.push(...action.payload);
       }
       console.log(JSON.parse(JSON.stringify(state.value)));
     },
