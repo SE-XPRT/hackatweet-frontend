@@ -1,7 +1,7 @@
 import styles from "../styles/Tweet.module.css";
 import Leftside from "./Leftside";
 import MiddleSide from "./Middleside";
-import RightSide from "./RightSide";
+import RightSide from "./Rightside";
 
 function Tweet() {
   return (

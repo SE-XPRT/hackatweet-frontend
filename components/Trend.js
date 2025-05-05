@@ -1,12 +1,11 @@
-import { ST } from "next/dist/shared/lib/utils";
 import styles from "../styles/Trend.module.css";
 
-function Trend() {
+function Trend(props) {
   return (
     <div className={styles.page}>
       <div className={styles.trend}>
-        <h4 className={styles.h4}>#hackatweet</h4>
-        <div className={styles.nbrTweets}>2 Tweets</div>
+        <h4 className={styles.h4}>{props.content}</h4>
+        <div className={styles.nbrTweets}>{props.count} Tweets</div>
       </div>
     </div>
   );
